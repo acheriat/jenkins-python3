@@ -5,7 +5,6 @@ pipeline {
             steps {
 		    withEnv(["HOME=${env.WORKSPACE}"]){
 			    sh 'python --version'
-			    sh 'python -m pip uninstall pip -y'
 			    sh 'pip install --user -r requirements.txt'
 		    }
 	    }
