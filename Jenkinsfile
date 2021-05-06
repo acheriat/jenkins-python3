@@ -12,7 +12,6 @@ pipeline {
         stage('test') {
             steps {
 		    withEnv(["HOME=${env.WORKSPACE}"]){
-			    sh 'pip install --user pytest==6.2.4'
 			    sh 'python -m pytest ./test/test_addition.py'
 		    }
 	    }
